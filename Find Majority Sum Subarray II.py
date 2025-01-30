@@ -1,5 +1,5 @@
-def findMajority(self, arr):
-        
+def findMajority(arr):
+        #Using Boyer-Moore's Algorithm
         res = []
         
         ele1,ele2 = -1,-1 #initialization
