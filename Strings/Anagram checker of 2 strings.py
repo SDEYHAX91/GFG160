@@ -1,3 +1,7 @@
+#FUNCTION TO CHECK WHETHER 2 STRINGS ARE ANAGRAMS
+
+# 1. USING DICTIONARY / HASHMAP
+#---------------------------------------------------
 def areAnagrams(s1, s2):
         
         if len(s1) != len(s2):
@@ -18,3 +22,21 @@ def areAnagrams(s1, s2):
                 d2[i] += 1
         
         return d1 == d2
+        
+
+# 2. USING FREQUENCY ARRAY
+#------------------------------------------------------
+def check(s1, s2):
+    freq_arr = [0] * 26 #Creating array of size 26
+    
+    for i in s1: #Incrementing frequency for s1
+        freq_arr[ord(i) - ord('a')] += 1
+    
+    for i in s2: #Decrementing frequency for s2
+        freq_arr[ord(i) - ord('a')] -= 1
+        
+    for i in freq_arr: #Check whether freq.. array has elements other than zero
+        if i != 0: 
+            return False #If so, then not anagram
+    return True # Else, true
+
