@@ -1,4 +1,6 @@
-def nonRepeatingChar(self,s):
+# 1. USING DICTIONARY
+#----------------------------
+def nonRepeatingChar(s): 
         #code here
         freq = {} #Creating dict for frequency 
         for i in s:
@@ -12,3 +14,5 @@ def nonRepeatingChar(self,s):
                 return i    #while traversing the string iteratively
         
         return '$'
+
+
